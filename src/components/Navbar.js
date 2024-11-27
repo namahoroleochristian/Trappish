@@ -3,6 +3,7 @@ import Logo from '../assets/image.png'
 function Navbar() {
   return (
     <div className="">
+        
     <nav className=" Navbar flex justify-between items-center px-6 py-4 bg-black ">
       <div ><img src={Logo} className="logo" alt="trappish music"></img></div>
       <input
