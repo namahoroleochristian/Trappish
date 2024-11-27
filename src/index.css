@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clip-hex {
+    clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%
+    );
+  }
+  .Navbar{
+    /* background: #db5c5c97; */
+    /* margin-top: 2px;  */
+    width: 95%;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: 0.5px solid gold;
+  }
+  Body{
+    background: #242424;
+    width: 100%;
+    height: 100vh;
+  }
+  .Hero{
+    background-image: url("../public/trapp.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+  
+    margin-top: 2vh;
+    width: 95%;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+   
+  }
+  .btn-book{
+    width: 20%;
+    background: #0000009a;
+    color: gold;
+    border-radius: 20px;
+    font-size: larger;
+    margin-top: 13vh;
+    border: 1px solid rgba(255, 217, 0, 0.589);
+    padding: 1%;
+  }
+  .btn-book:hover{
+    background: gold;
+    color: #000;
+  }
+  .logo{
+    /* height: 10px;
+     */
+     width: 80%;
+  }
+  /* LOGIN PAGE CSSS */
+  /* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;   
+    background-color: #000;
+} */
+body video{
+    /* margin-right:30px ; */
+    width: 100%;
+    opacity: 40%;
+}
+.wrapper{
+    position: relative;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 500px;
+    background: #0000007c;
+    box-shadow: 0 0 50px rgba(255, 217, 0, 0.34);
+    border-radius: 20px;
+    padding: 40px;
+}
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+h2{
+    font-size: 30px;
+    color: yellow;
+    text-align: center;
+}
+.login-form{
+/* background: #000; */
+width: 80%;
+}
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-group input {
+    width: 52%;
+    height: 40px;
+    font-size: 16px;
+    /* background: #000; */
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.input-group input:focus~label {
+    top: -5px;
+}
+.input-group input:valid~label {
+    top: -5px;
+}
+.remember {
+    margin: -5px 0 15px 5px;
+}
+.remember label {
+    color: #fff;
+    font-size: 14px;
+}
+.remember label input {
+    accent-color: #0ef;
+}
+.Lg-btn{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: rgb(4, 4, 4);
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.443);
+    border:2px solid gold;
+    color: gold;
+    font-weight: bolder;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.signup-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+.signup-link p {
+    color: #fff;
+}
+.signup-link p a {
+    color:gold;
+    text-decoration: none;
+    font-weight: 500;
+}
+.signup-link p a:hover {
+    text-decoration: underline;
+}
+
+.background-clip{
+    position: absolute;
+    align-items: center ;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.lg-trap{
+    margin-bottom: 70px;
+    color: white;
+    font-family: MyFont;
+    font-size: 30px;
+    margin-left: 7.5%;
+    font-weight: bolder;
+    transition: all .55s ease;
+    text-shadow: 0px 1px 20px gold;
+}
+.lg-trap:hover{
+    transform: scale(1.2);
+}
+.BG{
+  background-size: cover;
+  opacity: 100%;
+  width: 100%;
+  height: 100vh;
+  
+}
+  @font-face {
+      font-family: MyFont;
+      src: url(Game\ Of\ Squids.ttf);
+  }
+
+  /* LOGIN PAGE CSSS */
