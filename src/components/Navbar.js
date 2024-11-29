@@ -12,11 +12,11 @@ function Navbar() {
         className="bg-gray-800 text-sm text-yellow-500 px-4 py-2 rounded-md focus:outline-none"
       />
       <ul className="hidden md:flex space-x-6 text-yellow-400 text-sm">
-        <li>Home</li>
-        <li>Releases</li>
-        <li>Marketplace</li>
-        <li>Booking</li>
-        <li>About Us</li>
+        <li className="font-bold text-lg">Home</li>
+        <li className="font-bold text-lg">Releases</li>
+        <li className="font-bold text-lg">Marketplace</li>
+        <li className="font-bold text-lg">Booking</li>
+        <li className="font-bold text-lg">About Us</li>
       </ul>
       <div className="block md:hidden text-yellow-500">☰</div>
     </nav></div>
