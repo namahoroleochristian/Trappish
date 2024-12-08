@@ -1,26 +1,53 @@
-import React from "react";
-import Logo from '../assets/image.png'
+import React, { useState } from "react";
+import Logo from "../assets/image.png";
+
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="">
+    <nav className="Navbar bg-black px-6 py-4">
+      <div className="flex justify-between items-center">
         
-    <nav className=" Navbar flex justify-between items-center px-6 py-4 bg-black ">
-      <div ><img src={Logo} className="logo" alt="trappish music"></img></div>
-      <input
-        type="search"
-        placeholder="Search..."
-        className="bg-gray-800 text-sm text-yellow-500 px-4 py-2 rounded-md focus:outline-none"
-      />
-      <ul className="hidden md:flex space-x-6 text-yellow-400 text-sm">
-        <li className="font-bold text-lg">Home</li>
-        <li className="font-bold text-lg">Releases</li>
-        <li className="font-bold text-lg">Marketplace</li>
-        <li className="font-bold text-lg">Booking</li>
-        <li className="font-bold text-lg">About Us</li>
-      </ul>
-      <div className="block md:hidden text-yellow-500">☰</div>
-    </nav></div>
-    
+        <img src={Logo} className="Logo" alt="Trappish Music" />
+
+        
+        <input
+          type="search"
+          placeholder="Search..."
+          className="hidden md:block bg-gray-800 text-sm text-yellow-500 px-4 py-2 rounded-md focus:outline-none"
+        />
+
+       
+        <ul className="hidden md:flex space-x-6 text-yellow-400 text-sm font-bold">
+          <li className="hover:text-yellow-300 cursor-pointer">Home</li>
+          <li className="hover:text-yellow-300 cursor-pointer">Releases</li>
+          <li className="hover:text-yellow-300 cursor-pointer">Marketplace</li>
+          <li className="hover:text-yellow-300 cursor-pointer">Booking</li>
+          <li className="hover:text-yellow-300 cursor-pointer">About Us</li>
+        </ul>
+
+       
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-yellow-500 text-2xl focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+     
+      {isMenuOpen && (
+        <div className="md:hidden mt-4 bg-gray-900 rounded-md shadow-lg">
+          <ul className="flex flex-col text-yellow-400 text-sm font-bold space-y-4 p-4">
+            <li className="hover:text-yellow-300 cursor-pointer">Home</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Releases</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Marketplace</li>
+            <li className="hover:text-yellow-300 cursor-pointer">Booking</li>
+            <li className="hover:text-yellow-300 cursor-pointer">About Us</li>
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 }
 
