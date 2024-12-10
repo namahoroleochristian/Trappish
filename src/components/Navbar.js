@@ -21,7 +21,8 @@ function Navbar() {
        
         <ul className="hidden md:flex space-x-6 text-yellow-400 text-sm font-bold">
           <li className="hover:text-yellow-300 cursor-pointer"><Link to="/home  ">Home</Link></li>
-          <li className="hover:text-yellow-300 cursor-pointer">Releases</li>
+          <li className="font-bold text-lg"><Link to="/releases">Releases</Link></li>
+
           <li className="hover:text-yellow-300 cursor-pointer">Marketplace</li>
           <li className="hover:text-yellow-300 cursor-pointer"><Link to="/booking">Book</Link></li>
           <li className="hover:text-yellow-300 cursor-pointer">About Us</li>
@@ -40,11 +41,12 @@ function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden mt-4 bg-[#202020] rounded-md shadow-lg">
           <ul className="flex flex-col text-yellow-400 text-sm font-bold space-y-4 p-4">
-            <li className="hover:text-yellow-300 cursor-pointer">Home</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Releases</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Marketplace</li>
-            <li className="hover:text-yellow-300 cursor-pointer">Booking</li>
-            <li className="hover:text-yellow-300 cursor-pointer">About Us</li>
+          <li className="hover:text-yellow-300 cursor-pointer"><Link to="/home  ">Home</Link></li>
+          <li className="font-bold text-lg"><Link to="/releases">Releases</Link></li>
+
+          <li className="hover:text-yellow-300 cursor-pointer">Marketplace</li>
+          <li className="hover:text-yellow-300 cursor-pointer"><Link to="/booking">Book</Link></li>
+          <li className="hover:text-yellow-300 cursor-pointer">About Us</li>
           </ul>
         </div>
       )}
