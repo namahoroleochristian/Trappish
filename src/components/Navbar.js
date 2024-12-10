@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/image.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,18 +12,18 @@ function Navbar() {
         <img src={Logo} className="Logo" alt="Trappish Music" />
 
         
-        <input
+        {/* <input
           type="search"
           placeholder="Search..."
           className="hidden md:block bg-gray-800 text-sm text-yellow-500 px-4 py-2 rounded-md focus:outline-none"
-        />
+        /> */}
 
        
         <ul className="hidden md:flex space-x-6 text-yellow-400 text-sm font-bold">
-          <li className="hover:text-yellow-300 cursor-pointer">Home</li>
+          <li className="hover:text-yellow-300 cursor-pointer"><Link to="/home  ">Home</Link></li>
           <li className="hover:text-yellow-300 cursor-pointer">Releases</li>
           <li className="hover:text-yellow-300 cursor-pointer">Marketplace</li>
-          <li className="hover:text-yellow-300 cursor-pointer">Booking</li>
+          <li className="hover:text-yellow-300 cursor-pointer"><Link to="/booking">Book</Link></li>
           <li className="hover:text-yellow-300 cursor-pointer">About Us</li>
         </ul>
 
@@ -37,7 +38,7 @@ function Navbar() {
 
      
       {isMenuOpen && (
-        <div className="md:hidden mt-4 bg-gray-900 rounded-md shadow-lg">
+        <div className="md:hidden mt-4 bg-[#202020] rounded-md shadow-lg">
           <ul className="flex flex-col text-yellow-400 text-sm font-bold space-y-4 p-4">
             <li className="hover:text-yellow-300 cursor-pointer">Home</li>
             <li className="hover:text-yellow-300 cursor-pointer">Releases</li>

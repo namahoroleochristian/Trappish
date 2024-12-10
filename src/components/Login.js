@@ -1,7 +1,7 @@
 import React from "react";
-import Vid from "../assets/LoginBgVideo.mp4"
+// import Vid from "../assets/LoginBgVideo.mp4"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function Login() {
     const [name,SetName]=useState("");
     const [password,SetPassword]=useState("");
@@ -36,12 +36,12 @@ function Login() {
                         <h1  className="lg-trap">TRAPPISH MUSIC</h1>
                         {/* <!-- <h2>Login</h2> --> */}
                         <div className="input-group">
-                            <input type="text" onChange={(e)=>{SetName(e.target.value)}} required />
-                            <label for="">Username</label>
+                            <input type="text"  onChange={(e)=>{SetName(e.target.value)}} required />
+                            <label for="" className="text text-xl">Username</label>
                         </div>
                         <div className="input-group">
-                            <input type="password" required onChange={(e)=>{SetPassword(e.target.value)}} />
-                            <label for="">password</label>
+                            <input type="password"  required onChange={(e)=>{SetPassword(e.target.value)}} />
+                            <label for="" className="text text-xl">Password</label>
                         </div>
 
                         <div class="remember">
@@ -49,7 +49,7 @@ function Login() {
                         </div>
                         <button type="submit" className="Lg-btn" >Login</button>
                         
-                        <div className="signup-link"><p>Don't you have an account? <a  className="signup-link">Sign Up</a></p>
+                        <div className="signup-link"><p>Don't you have an account? <Link  className="signup-link">Sign Up</Link></p>
                         </div>
                     </form>
                 </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -46,8 +47,8 @@ function HeroSection() {
       <p className="text-gray-400 text-xl  mt-20">
         Your journey becomes a spark with us, <br/>Trappish elevated
       </p>
-      <button className="btn-book transition">
-        Book Your Session
+      <button className="btn-book transition"> <Link to="/booking">Book Your Session</Link>
+        
       </button>
       {/* Honeycomb */}
       {/* <div className="flex justify-center mt-12 space-x-4">
