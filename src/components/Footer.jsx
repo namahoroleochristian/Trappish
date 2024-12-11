@@ -7,7 +7,7 @@ function Footer() {
   return (
     <>
       <footer>
-        <div className="bg-gray-950 text-gray-200 p-10">
+        <div className="bg-[#101010] text-gray-200 p-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
               <div className="mb-5">
@@ -83,7 +83,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="bg-gray-900 w-full text-gray-500 px-10">
+        <div className="bg-[#101010] w-full text-gray-500 px-10">
           <div className="text-center">
             <div className="flex flex-col max-w-7xl sm:flex-row py-4 mx-auto justify-center items-center">
               Copyright <strong><span>Company</span></strong>. All rights reserved.
