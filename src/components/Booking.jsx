@@ -31,6 +31,7 @@
 // export default Booking
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function Booking() {
   const [formData, setFormData] = useState({
@@ -147,6 +148,7 @@ function Booking() {
         </form>
       </div>
     </div>
+    <Footer/>
     </>
   );
 }
