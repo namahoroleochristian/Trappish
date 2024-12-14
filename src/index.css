@@ -41,8 +41,8 @@
    
   }
   .btn-book{
-
-    width: 40%;
+    padding:20;
+    width: 60%;
     background: #0000009a;
     color: gold;
     border-radius: 20px;
@@ -75,11 +75,10 @@ body video{
 }
 .wrapper{
     position: relative;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+    /* width: 80%; */
+    
     height: 500px;
-    background: #0000007c;
+    background:rgba(255, 255, 255, 0.49);
     box-shadow: 0 0 50px rgba(255, 217, 0, 0.34);
     border-radius: 20px;
     padding: 40px;
@@ -97,8 +96,12 @@ h2{
     text-align: center;
 }
 .login-form{
-/* background: #000; */
-width: 80%;
+  border-radius:2.5%;
+  padding:50px;
+ background: #121212; 
+width: 60%;
+margin-left: 10%;
+    margin-right: 10%;
 }
 .input-group{
     position: relative;
@@ -144,7 +147,9 @@ width: 80%;
 }
 .Lg-btn{
     position: relative;
-    width: 100%;
+    width: 60%;
+    margin-left:20%;
+    margin-right:20%;
     height: 40px;
     background: rgb(4, 4, 4);
     box-shadow: 0 0 10px rgba(255, 255, 0, 0.443);
@@ -201,38 +206,41 @@ width: 80%;
   width: 100%;
   max-height: 100vh;
   
-}
+} 
   @font-face {
       font-family: MyFont;
       src: url(Game\ Of\ Squids.ttf);
   }
- /* .svg{
+  /* .svg{
   
   margin-right: auto;
   z-index: 999; 
-  height: 100%;
-}
+  height: 100%; */
+/* } */
 .Hero {
-  display: flex;
+  height:100vh;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
-} */
+  justify-content: space-between; */
+} 
 
-/* .text-content {
+
+.text-content {
   display: inline-block;
   max-width: 70%;
-  background:#fff;
+  /* background:#fff; */
+  margin-top:100px;
   text-align: center;
   align-items: center;
 }
-
+/*
 .svg-container {
   position: absolute;
   top: 0;
   right:  0;
   z-index: -1;
   width: 50%;
-}  */
+}  
 
   /* LOGIN PAGE CSSS */
   /* BOOKING PAGE CSSS */
@@ -283,3 +291,13 @@ width: 80%;
     padding: 4px;
   }
   /* BOOKING PAGE CSSS */
+  /* REGISTER PAGE CSSS */
+  .Register-form .Register-input{
+    outline:none;
+  }
+  .Register-form .login-txt{
+    align-items:center;
+    text-align:center;
+    /* margin-left:20% */
+  }
+  /* REGISTER PAGE CSSS */

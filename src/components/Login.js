@@ -29,8 +29,7 @@ function Login() {
                 
                 <br></br>
                 <br></br>
-            <div className="wrapper">
-                
+          
                 <div className="form-wrapper sign-in ">
                     <form action="" className="login-form" onSubmit={handleLogin}>
                         <h1  className="lg-trap">TRAPPISH MUSIC</h1>
@@ -47,13 +46,13 @@ function Login() {
                         <div class="remember">
                             <label for=""><input type="checkbox"  /> Remember me</label>
                         </div>
-                        <button type="submit" className="Lg-btn" >Login</button>
+                        <button type="submit" className="Lg-btn hover:bg-gold hover:text-black hover:transition duration-100" >Login</button>
                         
-                        <div className="signup-link"><p>Don't you have an account? <Link  className="signup-link">Sign Up</Link></p>
+                        <div className="signup-link "><p>Don't you have an account? <Link  className="signup-link" to="/">Sign Up</Link></p>
                         </div>
                     </form>
                 </div>
-            </div>
+            
             </div>
         </>
     );
