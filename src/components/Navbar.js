@@ -23,9 +23,9 @@ function Navbar() {
           <li className="hover:text-yellow-300  text-lg cursor-pointer"><Link to="/home  ">Home</Link></li>
           <li className="font-bold text-lg"><Link to="/releases">Releases</Link></li>
 
-          <li className="hover:text-yellow-300 text-lg cursor-pointer">Marketplace</li>
+          <li className="hover:text-yellow-300 text-lg cursor-pointer"><Link to="/MarketPlace">MarketPlace</Link></li>
           <li className="hover:text-yellow-300 text-lg cursor-pointer"><Link to="/booking">Book</Link></li>
-          <li className="hover:text-yellow-300 text-lg cursor-pointer">About Us</li>
+          <li className="hover:text-yellow-300 text-lg cursor-pointer"><Link to="/AboutUs">About Us</Link></li>
         </ul>
 
        
@@ -44,9 +44,9 @@ function Navbar() {
           <li className="hover:text-yellow-300 text-lg cursor-pointer"><Link to="/home  ">Home</Link></li>
           <li className="font-bold text-lg"><Link to="/releases">Releases</Link></li>
 
-          <li className="hover:text-yellow-300 text-lg cursor-pointer">Marketplace</li>
+          <li className="hover:text-yellow-300 text-lg cursor-pointer"><Link to="/MarketPlace">MarketPlace</Link></li>
           <li className="hover:text-yellow-300 text-lg cursor-pointer"><Link to="/booking">Book</Link></li>
-          <li className="hover:text-yellow-300 text-lg cursor-pointer">About Us</li>
+          <li className="hover:text-yellow-300 text-lg cursor-pointer"><Link to="/AboutUs">About Us</Link></li>
           </ul>
         </div>
       )}
