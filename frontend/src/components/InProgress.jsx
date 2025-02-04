@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { useTheme } from "../context/ThemeContext";
 
 function InProgress() {
+  const {theme} = useTheme()
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
+      <div className={`flex flex-col items-center  justify-center min-h-screen ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-teal-50 "}`}>
         <h1 className="text-5xl font-bold text-yellow-400 mb-4">Page in Progress</h1>
         <p className="text-lg text-gray-400 mb-6">
           This page is still under construction. Please check back later!

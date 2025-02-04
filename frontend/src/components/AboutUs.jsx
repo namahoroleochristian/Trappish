@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 function MarketPlace() {
     return(
         <>
-        <br />
         <Navbar/>
         <InProgress/>
         <Footer/>
