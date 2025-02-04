@@ -22,7 +22,7 @@ function HeroSection() {
           </p>
           <div className="mt-8">
             <Link to="/booking" aria-label="Book Your Session">
-              <button className={`transition transform hover:scale-105 py-2 px-6 rounded-lg font-semibold ${theme === "dark" ? "bg-yellow-500 text-gray-800 hover:bg-yellow-600" : "bg-yellow-600 text-white hover:bg-yellow-700"}`}>
+              <button className={`transition transform shadow-lg shadow-slate-600 hover:scale-105 py-2 px-6 rounded-lg font-semibold ${theme === "dark" ? "bg-yellow-500 text-gray-800 hover:bg-yellow-600" : "bg-yellow-600 text-white hover:bg-yellow-700"}`}>
                 Book Your Session
               </button>
             </Link>

@@ -94,7 +94,8 @@ function Booking() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className={`${getFieldClass("name")}   ${theme === 'dark' ? 'bg-slate-500 text-slate-200 text-lg ' :'bg-slate-300'}`}
+                    placeholder="Enter your names"
+                    className={`${getFieldClass("name")}   ${theme === 'dark' ? 'bg-slate-500 text-slate-200  ' :'bg-slate-300'} text-xl`}
                   />
                 </div>
                 <div className="flex flex-col">
@@ -108,6 +109,7 @@ function Booking() {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    placeholder="Enter your email"
                     className={`${getFieldClass("email")}   ${theme === 'dark' ? 'bg-slate-500 text-slate-200 text-lg ' :'bg-slate-300'}`}
                   />
                 </div>
@@ -127,6 +129,7 @@ function Booking() {
                     value={formData.eventDate}
                     onChange={handleChange}
                     required
+                    placeholder="Select date"
                     className={`${getFieldClass("email")}   ${theme === 'dark' ? 'bg-slate-500 text-slate-200 text-lg ' :'bg-slate-300'}`}
                   />
                 </div>
@@ -172,7 +175,7 @@ function Booking() {
                   type="submit"
                   onClick={handleSubmit}
                   // className="w-full text- p-3 rounded-md hover:bg-gold hover:text-black focus:outline-none focus:ring-2 focus:ring-gold"
-                  className={`w-2/5 p-5 text-white text-xl hover:scale-105 ${getFieldClass("email")} ${theme === 'dark' ? 'bg-slate-700' : 'bg-slate-700 hover:bg-slate-900'} `}
+                  className={`w-2/5 p-5 text-white  text-xl hover:scale-105 ${getFieldClass("email")} ${theme === 'dark' ? 'bg-slate-700' : 'bg-slate-700 hover:bg-slate-900'} max-sm:bg-emerald-900 w-2/3 `}
                 >
                   Submit Booking Request
                 </button>
