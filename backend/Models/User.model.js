@@ -12,7 +12,12 @@ export const userSchema = mongoose.Schema({
     password:{
         type:String,
         required: true
-    }
- })
+    },
+    resetPasswordToken: String,
+    resetPasswordExpiresAt : Date,
+    verificationToken:String,
+    verificationTokenExpiresAt:Date,
+
+ },{timestamps : true})
  const userModel = mongoose.model('User',userSchema)
  export default userModel

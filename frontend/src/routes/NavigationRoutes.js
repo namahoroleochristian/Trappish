@@ -5,23 +5,25 @@ import Login from "../components/Login";
 import HeroSection from "../components/HeroSection";
 import Booking from "../components/Booking";
 import Releases from "../components/Releases";
-import Register from "../components/Register";
+import Register from "../components/signUp";
 import NotFound from "../components/NotFound";
 import MarketPlace from "../components/MarketPlace";
 import AboutUs from "../components/AboutUs";
+import CreateRealese from "../components/AdminRelease";
 function NavigationRoutes() {
     return(
         <BrowserRouter>
             <Routes>
                 <Route path="/Login" element={<Login/>}/>
                 {/* <Route path="/lg" element={<Navbar/>}/> */}
-                <Route path="/home" element={<HeroSection/>}/>
+                <Route path="/" element={<HeroSection/>}/>
                 <Route path="/booking" element={<Booking/>}/>
                 <Route path="/Releases" element={<Releases/>}/>
-                <Route path="/" element={<Register/>}/>
+                <Route path="/signUp" element={<Register/>}/>
                 <Route path="*" element={<NotFound/>}/>
                 <Route path="/MarketPlace" element={<MarketPlace/>}/>
                 <Route path="/AboutUs" element={<AboutUs/>}/>
+                <Route path="/CreateRelease" element={<CreateRealese/>}/>
 
             </Routes>
         </BrowserRouter>

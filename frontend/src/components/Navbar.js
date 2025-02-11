@@ -18,17 +18,17 @@ function Navbar() {
 
   return (
     <nav
-      className={`m-0 text-center p-5 shadow-xl ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-teal-50 "} sticky top-0 z-10`}
+      className={` text-center p-5 shadow-xl ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-slate-200 "} sticky top-0 z-10`}
     >
       <div className="container mx-auto  flex justify-between items-center px-4 py-4">
         {/* Logo */}
-        <img src={Logo} className="h-10" alt="Trappish Music" />
+        {/* <img src={Logo} className="h-10" alt="Trappish Music" /> */}
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg font-semibold ">
           <li>
             <Link
-              to="/home"
+              to="/"
               className="text-gray-700 dark:text-gray-200 hover:text-yellow-500"
             >
               Home

@@ -109,8 +109,8 @@ margin-left: 10%;
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    font-size: 16px;
-    color: #fff;
+   
+    
     pointer-events: none;
     transition: .5s;
 }
@@ -121,7 +121,7 @@ margin-left: 10%;
     /* background: #000; */
     color: #fff;
     padding: 0 5px;
-    background: transparent;
+    /* background: transparent; */
     border: none;
     outline: none;
 }

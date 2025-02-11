@@ -3,11 +3,17 @@ import Ish1 from "../assets/ish1.jpg";
 import Ish2 from "../assets/ish2.jpeg";
 import Ish3 from "../assets/ish3.jpg";
 import Semana from "../assets/semana.jpg";
-import Pull1 from "../assets/pull1.jpeg";
-import Pull2 from "../assets/pull2.jpeg";
+import Pull1 from "../assets/pull1.png";
+import Pull2 from "../assets/pull2.png";
+import Pull3 from "../assets/pull3.png";
+import Pull4 from "../assets/pull4.png";
+import Pull5 from "../assets/pull5.png";
+
+
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { useTheme } from "../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 function Releases() {
   const { theme } = useTheme();
@@ -49,21 +55,21 @@ function Releases() {
       id: 2,
       title: "Merch",
       description: "Trappish",
-      image: Pull2,
+      image: Pull3,
       rating: 4,
     },
     {
       id: 3,
       title: "Merch",
       description: "Trappish",
-      image: Pull2,
+      image: Pull4,
       rating: 4,
     },
     {
       id: 4,
       title: "Merch",
       description: "Trappish",
-      image: Pull2,
+      image: Pull5,
       rating: 4,
     },
     {
@@ -78,10 +84,14 @@ function Releases() {
     <>
       <Navbar />
       <section
-        className={`text-center px-4 py-20 min-h-screen relative ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-teal-50 "}`}
+        className={`text-center py-20 min-h-screen relative ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-teal-50 "}`}
       >
         {/* Latest Releases Section */}
+        
         <div className="ml-10">
+          <div className="flex justify-end items-center  ">
+         <Link to="/CreateRelease" className={`pb-2 px-2 rounded-lg ${theme === 'dark' ? 'border  border-slate-500 text-slate-300 ' : 'bg-teal-100 text-gray-700 p-2 shadow-lg'}   font-semibold text-2xl`}>Admin</Link>
+         </div>
           <h2
             className={`hover:cursor-pointer p-4 font-semibold ${
               theme === "dark" ? "text-slate-200" : "text-slate-600"
@@ -89,10 +99,10 @@ function Releases() {
           >
             Latest Releases
           </h2>
-        </div>
+          </div>
         <div
-          className={`flex overflow-x-auto space-x-4 p-4 bg-transparent scrollbar-hide ${
-            theme === "dark" ? "bg-transparent" : "bg-gray-100"
+          className={`flex overflow-x-auto space-x-4 p-8  shadow-xl rounded-lg scrollbar-hide ${
+            theme === "dark" ? "bg-transparent " : "bg-slate-200"
           }`}
         >
           {releasesData.map((release) => (
@@ -101,16 +111,19 @@ function Releases() {
               className={`min-w-[18rem] w-72 rounded-lg p-10 bg-slate-600 ${
                 theme === "dark"
                   ? "bg-transparent shadow-xl border border-slate-700"
-                  : "bg-transparent shadow-xl"
+                  : "bg-teal-50 shadow-xl"
               } hover:scale-110 duration-150 ease-in`}
             >
               <img
                 src={release.image}
                 alt={release.title}
-                className="w-52 h-52 rounded-full"
+                className="w-52 h-52 rounded-full shadow-md hover:scale-105 hover:shadow-xl hover:shadow-black shadow-black"
               />
               <div className="text-center mt-4">
-                <h3 className="text-2xl text-white font-mono">
+                <h3 className={`text-2xl font-semibold ${ theme === "dark"
+                      ? "text-slate-200" 
+                      : " text-gray-700 " 
+                  }} font-mono`}>
                   {release.title}
                 </h3>
                 <h6
@@ -122,28 +135,30 @@ function Releases() {
                 >
                   {release.artist}
                 </h6>
+                
               </div>
             </div>
+            
           ))}
         </div>
 
         {/* Released Products Section */}
         <div
-          className={`bg-transparent ${
+          className={` ${
             theme === "dark"
               ? "bg-slate-800"
               : "border border-transparent bg-gray-100"
-          } mt-10 rounded-xl shadow-2xl `}
+          } mt-10 rounded-xl shadow-2xl min-w-full `}
         >
           <h2
-            className={`ml-10 hover:cursor-pointer p-4 font-semibold ${
+            className={`ml-10 hover:cursor-pointer pt-4 font-semibold ${
               theme === "dark" ? "text-slate-200" : "text-slate-600"
             }`}
           >
             Released Products
           </h2>
           <div
-            className="flex overflow-x-auto space-x-6 p-8 scrollbar-hide"
+            className={`flex overflow-x-auto space-x-6 py-8 ${theme === 'dark' ? 'bg-transparent' : 'bg-slate-200'}  scrollbar-hide`}
           >
             {productsData.map((product) => (
               <div
@@ -151,7 +166,7 @@ function Releases() {
                 className={`min-w-[18rem] w-64 rounded-lg p-10 relative bg-slate-600 ${
                   theme === "dark"
                     ? "bg-transparent shadow-xl border border-slate-700"
-                    : "bg-transparent shadow-xl bg-neutral-400"
+                    : " shadow-xl bg-teal-50"
                 } hover:scale-110 duration-150 ease-in`}
               >
                 {/* Product Image */}
@@ -166,7 +181,10 @@ function Releases() {
                 </button>
                 {/* Product Details */}
                 <div className="mt-4">
-                  <h3 className="text-white text-xl">{product.title}</h3>
+                  <h3 className={`text-2xl font-semibold ${ theme === "dark"
+                      ? "text-slate-200" 
+                      : " text-gray-700 " 
+                  }} font-mono`}>{product.title}</h3>
                   <p className="text-gray-400 text-sm">{product.description}</p>
                   {/* Star Ratings */}
                   <div className="flex mt-2">
