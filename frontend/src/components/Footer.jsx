@@ -44,7 +44,7 @@ function Footer() {
                 <FooterLink to="/about" label="About us" />
                 <FooterLink to="/contact" label="Contact" />
                 <FooterLink to="/login" label="Login" />
-                <FooterLink to="/signup" label="Sign up" />
+                <FooterLink to="/signUp" label="Sign up" />
               </ul>
             </div>
 
