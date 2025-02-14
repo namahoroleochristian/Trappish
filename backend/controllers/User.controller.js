@@ -31,11 +31,13 @@ export const CreateUser =async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      
       verificationToken,
       verificationTokenExpiresAt : Date.now() + 24 * 60 *60 * 1000        
     });
     try {
       await newUser.save();
+
       generateTokenAndSetCookie(res,newUser._id)
       res.status(201).json({
         success: true,

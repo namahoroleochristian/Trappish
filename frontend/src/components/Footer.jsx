@@ -19,9 +19,9 @@ function Footer() {
   const { theme } = useTheme(); // Access the current theme
 
   return (
-    <footer className={`text-center shadow-2xl pt-6 shadow-gray-900 relative ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-teal-50 "}`}>
-      <div >
-        <div className="max-w-7xl mx-auto">
+    <footer className={`text-left shadow-2xl  pt-6 shadow-gray-900 relative ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-slate-200 "}`}>
+      <div className='flex flex-between '>
+        <div className={`max-w-7xl px-4 mx-auto min-w-full ${theme === 'dark' ? '"bg-gradient-to-r from-gray-700 to-gray-900 shadow-2xl shadow-zinc-900': ''}`}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Company Info */}
             <div className="mb-5">
@@ -62,7 +62,7 @@ function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className={`text-center mb-0 pb-0 relative ${theme === "dark" ? " bg-gray-700 " : " from-yellow-200 to-slate-800"}`}>
+      <div className={`text-center mb-0 pb-0 relative ${theme === "dark" ? " bg-gray-700 " : " bg-slate-50"}`}>
         <div className="text-center max-w-7xl mx-auto">
           <div className="py-4 text-lg">
             Copyright <strong><span>christian_namahoro</span></strong>. All rights reserved.

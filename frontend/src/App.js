@@ -1,10 +1,10 @@
 import React from "react";
 import NavigationRoutes from "./routes/NavigationRoutes";
-import { ThemeProvider } from "./context/ThemeContext"; // Import your ThemeProvider
+import { ThemeProvider } from "./context/ThemeContext"; 
 
 function App() {
   return (
-    <ThemeProvider> {/* Wrap your app with ThemeProvider */}
+    <ThemeProvider> 
       <div className="Body text-white">
         <NavigationRoutes />
       </div>

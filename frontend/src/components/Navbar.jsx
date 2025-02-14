@@ -87,11 +87,11 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className={`md:hidden ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-slate-900" : "bg-gradient-to-r from-yellow-200 to-slate-800"} bg-gray-100 dark:bg-gray-800 px-4 py-2`}>
-          <ul className="space-y-4 text-lg font-semibold">
+        <div className={`md:hidden  ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-slate-900" : "bg-gradient-to-r bg-slate-200 "} bg-gray-100 dark:bg-gray-800 px-4 py-2`}>
+          <ul className="space-y-4 text-lg font-semibold  shadow-inner" >
             <li>
               <Link
-                to="/home"
+                to="/"
                 className="text-gray-700 dark:text-gray-200 hover:text-yellow-500"
               >
                 Home
