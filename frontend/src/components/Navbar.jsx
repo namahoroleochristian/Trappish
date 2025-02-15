@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../assets/image.png";
+// import Logo from "../assets/image.png";
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext.js"; // Import your useTheme hook
 
