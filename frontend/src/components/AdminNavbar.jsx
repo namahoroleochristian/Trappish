@@ -27,10 +27,10 @@ function AdminNavbar() {
             </form>
           </li>
           <li className={``}>
-            <h3 className={`font-semibold ${theme == 'dark' ? '' :'text-gray-700 '}`}>Add</h3>
+            <h3 className={`font-semibold ${theme === 'dark' ? '' :'text-gray-700 '}`}>Add</h3>
           </li>
           <li className={``}>
-            <h3 className={`font-semibold ${theme == 'dark' ? '' :'text-gray-700 '}`}>Update</h3>
+            <h3 className={`font-semibold ${theme === 'dark' ? '' :'text-gray-700 '}`}>Update</h3>
           </li>
         </ul>
       </nav>
