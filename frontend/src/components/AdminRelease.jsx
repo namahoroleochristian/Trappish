@@ -1,44 +1,44 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import AdminNavbar from "./AdminNavbar";
 
 function CreateRealese() {
   const { theme } = useTheme();
-  const [ProductData, setProductData] = useState({
-    name: "",
-    price: "",
-    category: "",
-    image: "",
-  });
+  // const [ProductData, setProductData] = useState({
+  //   name: "",
+  //   price: "",
+  //   category: "",
+  //   image: "",
+  // });
 
-  const HandleSubmit = async (e) => {
-    e.preventDefault();
+  // const HandleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:3040/api/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(ProductData),
-      });
+  //   try {
+  //     const response = await fetch("http://localhost:3040/api/products", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(ProductData),
+  //     });
 
-      if (response.ok) {
-        const data = await response.json();
-        console.log("Product created successfully:", data);
-        alert("Product created successfully!");
-        setProductData({ name: "", price: "", category: "", image: "" }); // Reset form
-      } else {
-        console.error("Error creating product:", response.statusText);
-        alert("Failed to create product!");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while creating the product.");
-    }
-  };
+  //     if (response.ok) {
+  //       const data = await response.json();
+  //       console.log("Product created successfully:", data);
+  //       alert("Product created successfully!");
+  //       setProductData({ name: "", price: "", category: "", image: "" }); // Reset form
+  //     } else {
+  //       console.error("Error creating product:", response.statusText);
+  //       alert("Failed to create product!");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //     alert("An error occurred while creating the product.");
+  //   }
+  // };
 
   return (
     <>
@@ -58,7 +58,7 @@ function CreateRealese() {
         <div className={`flex flex-col justify-center items-center mt-2`}>
           <form
             className={`w-5/6 mt-10 min-h-[78vh] flex flex-col justify-center items-center ${theme === 'dark' ? '"bg-gradient-to-r from-gray-700 to-gray-900 shadow-2xl shadow-zinc-900': 'bg-slate-200'} shadow-xl text-black rounded-xl shadow-slate-400`}
-            onSubmit={HandleSubmit}
+            // onSubmit={HandleSubmit}
           >
         <h1
               className={`text-center text-black text-2xl hover:cursor-pointer p-4 font-semibold ${
@@ -74,13 +74,13 @@ function CreateRealese() {
                 id="name"
                 type="text"
                 name="name"
-                onChange={(e) =>
-                  setProductData({ ...ProductData, [e.target.name]: e.target.value })
-                }
-                value={ProductData.name}
+                // onChange={(e) =>
+                //   setProductData({ ...ProductData, [e.target.name]: e.target.value })
+                // }
+                // value={ProductData.name}
                 placeholder="Enter Product Name"
                 required
-                className ={`${theme == 'dark' ? 'bg-slate-500 text-white': 'bg-slate-300'} outline-none p-3 rounded-lg `}
+                className ={`${theme === 'dark' ? 'bg-slate-500 text-white': 'bg-slate-300'} outline-none p-3 rounded-lg `}
               />
             </div>
             <div className={`p-3 ml-2 flex flex-col text-lg w-5/6`}>
@@ -89,13 +89,13 @@ function CreateRealese() {
                 id="price"
                 type="number"
                 name="price"
-                onChange={(e) =>
-                  setProductData({ ...ProductData, [e.target.name]: e.target.value })
-                }
-                value={ProductData.price}
+                // onChange={(e) =>
+                //   setProductData({ ...ProductData, [e.target.name]: e.target.value })
+                // }
+                // value={ProductData.price}
                 placeholder="Enter Product Price"
                 required
-                className ={`${theme == 'dark' ? 'bg-slate-500 text-white': 'bg-slate-300'} outline-none p-3 rounded-lg `}
+                className ={`${theme === 'dark' ? 'bg-slate-500 text-white': 'bg-slate-300'} outline-none p-3 rounded-lg `}
               />
              
             </div>
@@ -105,13 +105,13 @@ function CreateRealese() {
                 id="category"
                 type="text"
                 name="category"
-                onChange={(e) =>
-                  setProductData({ ...ProductData, [e.target.name]: e.target.value })
-                }
-                value={ProductData.category}
+                // onChange={(e) =>
+                //   setProductData({ ...ProductData, [e.target.name]: e.target.value })
+                // }
+                // value={ProductData.category}
                 placeholder="Enter Product Category"
                 required
-                className ={`${theme == 'dark' ? 'bg-slate-500 text-white': 'bg-slate-300'} outline-none p-3 rounded-lg `}
+                className ={`${theme === 'dark' ? 'bg-slate-500 text-white': 'bg-slate-300'} outline-none p-3 rounded-lg `}
               />
             </div>
             <div className={`p-3 ml-2 flex flex-col text-lg w-5/6`}>
@@ -120,13 +120,13 @@ function CreateRealese() {
                 id="image"
                 type="text"
                 name="image"
-                onChange={(e) =>
-                  setProductData({ ...ProductData, [e.target.name]: e.target.value })
-                }
-                value={ProductData.image}
+                // onChange={(e) =>
+                //   setProductData({ ...ProductData, [e.target.name]: e.target.value })
+                // }
+                // value={ProductData.image}
                 placeholder="Enter Product Image URL"
                 required
-                className ={`${theme == 'dark' ? 'bg-slate-500 text-white': 'bg-slate-300'} outline-none p-3 rounded-lg `}
+                className ={`${theme === 'dark' ? 'bg-slate-500 text-white': 'bg-slate-300'} outline-none p-3 rounded-lg `}
               />
             </div>
             <div className={`p-3 ml-2 flex flex-col text-lg w-3/6`}>  
