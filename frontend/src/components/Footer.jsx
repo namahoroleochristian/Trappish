@@ -1,5 +1,9 @@
 import React from 'react';
-import { FaInstagram, FaFacebook, FaTwitter, FaApple, FaYoutube, FaSpotify, FaChevronRight } from 'react-icons/fa';
+import { FaInstagram ,
+  // , FaFacebook, FaTwitter, FaApple, FaYoutube, FaSpotify, 
+  FaChevronRight
+ }
+   from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext"; // Import the useTheme hook
 
@@ -62,12 +66,12 @@ function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className={`text-center mb-0 pb-0 relative ${theme === "dark" ? " bg-gray-700 " : " bg-slate-50"}`}>
-        <div className="text-center max-w-7xl mx-auto">
-          <div className="py-4 text-lg">
+      <div className={`text-center max-h-20  overflow-scroll  mb-0 pb-0 relative ${theme === "dark" ? " bg-gray-700 " : " bg-slate-200"}`}>
+        <div className="text-center max-w-7xl mx-auto ">
+          <div className={`py-4 text-lg  ${theme === 'dark' ? '':'text-gray-700 '}`}>
             Copyright <strong><span>christian_namahoro</span></strong>. All rights reserved.
           </div>
-          <div>
+          <div className={`${theme === 'dark' ? 'text-slate-200':'text-gray-700'}`}>
             Designed by <Link to="/" className={theme === "dark" ? "text-yellow-500" : "text-blue-600"}>christian_namahoro</Link>
           </div>
           <div className="flex justify-center mt-4 space-x-3">
