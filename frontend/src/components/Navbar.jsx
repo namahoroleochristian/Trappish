@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import Logo from "../assets/image.png";
+import Logo from "../assets/image.png";
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext.js"; // Import your useTheme hook
 
@@ -22,7 +22,7 @@ function Navbar() {
     >
       <div className="container mx-auto  flex justify-between items-center px-4 py-4">
         {/* Logo */}
-        {/* <img src={Logo} className="h-10" alt="Trappish Music" /> */}
+        <img src={Logo} className="h-10" alt="Trappish Music" />
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg font-semibold ">
