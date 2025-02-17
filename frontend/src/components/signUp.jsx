@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 // import "tailwindcss/tailwind.css";
+import { useTheme } from "../context/ThemeContext";
 import { Link } from "react-router-dom";
 
 function Register() {
+  const {theme,toggleTheme} = useTheme()
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -21,18 +23,26 @@ function Register() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#101010]">
-      <div className="w-full max-w-md p-8 bg-[#202020] rounded-lg shadow-lg text-yellow-500">
-        <h2 className="text-2xl font-bold text-center mb-6">Register</h2>
-        <form onSubmit={handleSubmit} className="space-y-4 Register-form">
-          <div>
+    <div className={`flex justify-center flex-col items-center min-h-screen  ${theme === 'dark' ? 'bg-gradient-to-r from-gray-700 to-gray-900': 'bg-teal-50'}`}>
+      <div className="flex justify-end mr-48 p-6 w-full">
+                <button
+          className="p-2 rounded-full bg-yellow-500 dark:bg-gray-800 text-white dark:text-yellow-500 focus:outline-none"
+          onClick={toggleTheme} // Use the toggleTheme from context
+        >
+          {theme === "dark" ? "🌞" : "🌙"}
+        </button>
+                </div>
+      <div className={`w-full max-w-md p-8 rounded-lg shadow-lg  ${theme === 'dark' ? 'bg-gradient-to-r from-gray-700 to-gray-900 drop-shadow-2xl ': 'bg-slate-300'}`}>
+        <h2 className={`text-2xl font-bold text-center mb-6 ${theme === 'dark' ? '': 'text-slate-700'}`}>Register</h2>
+        <form onSubmit={handleSubmit} className={`space-y-4 ${theme === 'dark' ? '': ' '}`}>
+          <div className="">
             <input
               type="text"
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
               placeholder="Full Name"
-              className="w-full p-3 rounded-md bg-[#121212] Register-input text-white border-none focus:ring-2 focus:ring-gold"
+              className={`w-full p-3 rounded-md border-none  ${theme === 'dark' ? '': 'bg-slate-500 outline-none `'}`}
             />
           </div>
           <div>
@@ -42,7 +52,7 @@ function Register() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Email Address"
-              className="w-full p-3 rounded-md bg-[#121212] Register-input text-white border-none focus:ring-2 focus:ring-gold"
+              className={`w-full p-3 rounded-md border-none  ${theme === 'dark' ? '': 'bg-slate-500 outline-none `'}`}
             />
           </div>
           <div>
@@ -52,7 +62,7 @@ function Register() {
               value={formData.password}
               onChange={handleChange}
               placeholder="Password"
-              className="w-full p-3 rounded-md bg-[#121212] Register-input text-white border-none focus:ring-2 focus:ring-gold"
+              className={`w-full p-3 rounded-md  border-none  ${theme === 'dark' ? '': 'bg-slate-500 outline-none `'}`}
             />
           </div>
           <div>
@@ -62,16 +72,16 @@ function Register() {
               value={formData.confirmPassword}
               onChange={handleChange}
               placeholder="Confirm Password"
-              className="w-full p-3 rounded-md bg-[#121212] Register-input text-white border-none focus:ring-2 focus:ring-gold"
+              className={`w-full p-3 rounded-md  border-none  ${theme === 'dark' ? '': 'bg-slate-500 outline-none `'}`}
             />
           </div>
           <button
             type="submit"
-            className="w-full py-3 bg-yellow-500 text-black font-bold rounded-md hover:bg-yellow-600 transition duration-300"
+            className={`w-full py-3  text-black font-bold rounded-md hover:bg-yellow-600 transition duration-300 ${theme === 'dark' ? '': 'bg-yellow-500'}`}
           >
             Register
           </button>
-          <h1 className="text-white login-txt">Already have an account? <Link to="/login" className="text-gold">Login</Link> </h1>
+          <h1 className={` text-center ${theme === 'dark' ? '' : 'text-slate-600 '} `}>Already have an account? <Link to="/login" className={`text-gold`}>Login</Link> </h1>
         </form>
       </div>
     </div>
