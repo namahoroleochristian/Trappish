@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <nav
-      className={` text-center p-5 shadow-xl ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-slate-200 "} sticky top-0 z-10`}
+      className={` text-center p-5 shadow-xl ${theme === "dark" ? "bg-gradient-to-r from-gray-700 to-gray-900" : "bg-slate-200 "}  sticky z-10 top-0 `}
     >
       <div className="container mx-auto  flex justify-between items-center px-4 py-4">
         {/* Logo */}

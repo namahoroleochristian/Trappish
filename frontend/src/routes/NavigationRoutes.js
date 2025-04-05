@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Login from "../components/Login";
 // import Navbar from "./components/Navbar";
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../components/HomePage";
 import Booking from "../components/Booking";
 import Releases from "../components/Releases";
 import Register from "../components/signUp";
