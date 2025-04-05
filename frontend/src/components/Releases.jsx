@@ -90,7 +90,7 @@ function Releases() {
         
         <div className="ml-10">
           <div className="flex justify-end items-center  ">
-         <Link to="/CreateRelease" className={`pb-2 px-2 rounded-lg ${theme === 'dark' ? 'border  border-slate-500 text-slate-300 ' : 'bg-teal-100 text-gray-700 p-2 shadow-lg'}   font-semibold text-2xl`}>Admin</Link>
+         <Link to="/CreateRelease" className={`pb-2 px-2 rounded-lg ${theme === 'dark' ? 'border  border-slate-500 text-slate-300 ' : 'bg-teal-100 text-gray-700 p-2 shadow-lg'} sticky z-10 top-zz10   font-semibold text-2xl`}>Admin</Link>
          </div>
           <h2
             className={`hover:cursor-pointer p-4 font-semibold ${
@@ -101,14 +101,14 @@ function Releases() {
           </h2>
           </div>
         <div
-          className={`flex overflow-x-auto space-x-4 p-8  shadow-xl rounded-lg scrollbar-hide ${
+          className={`flex justify-between overflow-x-auto  space-x-4 p-8  shadow-xl rounded-lg scrollbar-hide ${
             theme === "dark" ? "bg-transparent " : "bg-slate-200"
           }`}
         >
           {releasesData.map((release) => (
             <div
               key={release.id}
-              className={`min-w-[18rem] w-72 rounded-lg p-10 bg-slate-600 ${
+              className={`min-w-[18rem] w-72 rounded-lg p-10  bg-slate-600 ${
                 theme === "dark"
                   ? "bg-transparent shadow-xl border border-slate-700"
                   : "bg-teal-50 shadow-xl"
